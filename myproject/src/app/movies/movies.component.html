@@ -3,7 +3,7 @@
   <div class="row">
     <div class="row__inner">
 
-    <div class="tile" *ngFor='let movie of _movies'>
+    <div class="tile" *ngFor="let movie of _movies" (click)="openMovie( movie )">
         <div class="tile__details">
             <div class="tile__title">
                 {{ movie.title }}
@@ -15,3 +15,4 @@
       </div>
   
 </div>
+    
