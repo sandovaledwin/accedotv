@@ -39,11 +39,11 @@
 
         <div class="col-md-5"></div>
         <div class="col-md-2">
-            <button class="loginBtn loginBtn--facebook">
+            <button class="loginBtn loginBtn--facebook" (click)="login( 'facebook' )">
                 Login with Facebook
             </button>
 
-            <button class="loginBtn loginBtn--google" (click)="login()">
+            <button class="loginBtn loginBtn--google"   (click)="login( 'google' )">
                 Login with Google
             </button>
         </div>

@@ -47,8 +47,9 @@ export class AppComponent {
 
   }
 
-  login() {
-    this.authService.loginWithGoogle().then(
+  login( authType : String ) {
+
+    this.authService.login( authType ).then(
       ( data ) => {
         console.log( data.user.displayName );
         console.log( this );
@@ -57,10 +58,11 @@ export class AppComponent {
         this.showLogout  = true;
       }
     );    
+    
   }
 
   logout() {
-    this.authService.logoutWithGoogle().then(
+    this.authService.logout().then(
       ( data ) => {
           this.showMovies = false;
           this.showPlayer = false;

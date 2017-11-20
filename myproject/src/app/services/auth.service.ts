@@ -11,10 +11,16 @@ export class AuthService {
     return this.afAuth.authState;
   }
 
-  loginWithGoogle() {
-    return this.afAuth.auth.signInWithPopup(new firebase.auth.GoogleAuthProvider());
+  login( authType : String ) {
+
+    if( authType === "google" ){
+      return this.afAuth.auth.signInWithPopup(new firebase.auth.GoogleAuthProvider() );
+    }
+
+    return this.afAuth.auth.signInWithPopup(new firebase.auth.FacebookAuthProvider() );
+
   }
-  logoutWithGoogle() {
+  logout() {
     return this.afAuth.auth.signOut();
   }
 
