@@ -17,6 +17,10 @@ export class AuthService {
       return this.afAuth.auth.signInWithPopup(new firebase.auth.GoogleAuthProvider() );
     }
 
+    if( authType === "github" ){
+      return this.afAuth.auth.signInWithPopup(new firebase.auth.GithubAuthProvider() );
+    }    
+
     return this.afAuth.auth.signInWithPopup(new firebase.auth.FacebookAuthProvider() );
 
   }
