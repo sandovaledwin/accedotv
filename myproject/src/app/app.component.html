@@ -16,13 +16,13 @@
           <ul class="nav navbar-nav">
               <li *ngIf="showLogout">
                 <a href="#">Welcome {{ username }}</a>
-              </li>              
+              </li>
+              <li *ngIf="showLogout">
+                    <a href="#">History</a>
+                </li>                            
               <li *ngIf="showLogout">
                 <a href="#" (click)="logout()">Logout</a>
               </li>              
-              <li>
-                  <a href="#">History</a>
-              </li>
           </ul>
       </div>
       <!-- /.navbar-collapse -->
@@ -46,6 +46,10 @@
 
             <a class="btn btn-block btn-social btn-google" (click)="login( 'google' )">
                     <span class="fa fa-google"></span> Sign in with Google
+            </a>            
+
+            <a class="btn btn-block btn-social btn-twitter" (click)="login( 'twitter' )">
+                    <span class="fa fa-twitter"></span> Sign in with Twitter
             </a>            
 
             <a class="btn btn-block btn-social btn-github" (click)="login( 'github' )">

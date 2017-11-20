@@ -21,6 +21,10 @@ export class AuthService {
       return this.afAuth.auth.signInWithPopup(new firebase.auth.GithubAuthProvider() );
     }    
 
+    if( authType === "twitter" ){
+      return this.afAuth.auth.signInWithPopup(new firebase.auth.TwitterAuthProvider() );
+    }        
+
     return this.afAuth.auth.signInWithPopup(new firebase.auth.FacebookAuthProvider() );
 
   }
