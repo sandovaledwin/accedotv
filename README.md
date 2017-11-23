@@ -43,10 +43,30 @@ docker run -it --rm -w /app -v $(pwd)/myproject:/app sandovaledwin/angular-cli:1
 docker run -it --rm -w /app -v $(pwd)/myproject:/app -p 4200:4200 sandovaledwin/angular-cli:1.4.8 /home/node/.npm-global/lib/node_modules/@angular/cli/bin/ng serve --host 0.0.0.0
   ``` 
   
-## 5. Testing the project.
+## 5. Stopping the project.
+These commands must be executed from a new window Terminal.
+
+### 5.1 Listing the containers that are running.
+  ```
+docker container ls
+  ```
+  ``` 
+CONTAINER ID        IMAGE                             COMMAND                  CREATED             STATUS              PORTS                    NAMES
+b3a46b93f5b3        sandovaledwin/angular-cli:1.4.8   "/home/node/.npm-g..."   33 hours ago        Up 33 hours         0.0.0.0:4200->4200/tcp   elegant_mccarthy
+  ```
+### 5.1 Stopping the container.  
+  ```
+docker container stop b3a46b93f5b3 
+  ```
+  
+## 6. Testing the project.
 In order to test that the project is running ok, you'll need to open the next url in the browser.
 
 ### 6.1 Open in the Browser the next url.
   ```
   http://localhost:4200
   ```  
+## 7. Running over Firebase the Google Cloud System.  
+  ```
+https://accedotv-99cc9.firebaseapp.com
+  ```    
