@@ -7,8 +7,9 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class PlayerComponent implements OnInit {
 
-  @Input() movie:  String = '';
-  @Input() poster: String = '';
+  @Input() movie  : String = '';
+  @Input() poster : String = '';
+  @Input() title  : String = '';
 
   constructor() { }
 

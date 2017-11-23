@@ -18,13 +18,15 @@ import { AngularFireAuthModule } from 'angularfire2/auth';
 import { environment } from '../environments/environment';
 
 import { AuthService } from './services/auth.service';
+import { HistoryComponent } from './history/history.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     MoviesComponent,
-    PlayerComponent
+    PlayerComponent,
+    HistoryComponent
   ],
   imports: [
     HttpModule,

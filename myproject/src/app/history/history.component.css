@@ -1,0 +1,13 @@
+.historySection {
+    background-color: white;
+    padding: 25px 0px;
+}
+
+table {
+    width: 100%;
+}
+
+td {
+    padding: 5px 5px;
+    width: 50%;
+}

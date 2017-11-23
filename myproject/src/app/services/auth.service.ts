@@ -7,7 +7,7 @@ export class AuthService {
 
   constructor( public afAuth: AngularFireAuth ) { }
 
-  getLoginGoogleState(){
+  getLoginState(){
     return this.afAuth.authState;
   }
 

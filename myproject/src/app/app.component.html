@@ -17,7 +17,7 @@
               <li *ngIf="showLogout">
                 <a href="#">Welcome {{ username }}</a>
               </li>
-              <li *ngIf="showLogout">
+              <li *ngIf="showLogout" (click)="openHistory()">
                     <a href="#">History</a>
                 </li>                            
               <li *ngIf="showLogout">
@@ -32,7 +32,15 @@
 
 <app-movies *ngIf="showMovies" (movieSelected)="moviePlay( $event )" ></app-movies>
 
-<app-player *ngIf="showPlayer" [movie]="movieToPlay" [poster]="picture"></app-player>
+<app-player *ngIf="showPlayer" [movie]="movieToPlay" [poster]="picture" [title]="movieTitle"></app-player>
+
+<app-history *ngIf="showHistory" (movieSelected)="moviePlay( $event )" ></app-history>
+
+<div class="container bigHeader" *ngIf="!showLogout">
+    <div class="row">
+            
+    </div>
+</div>    
 
 <div class="container" *ngIf="!showLogout">
     <div class="row">
@@ -40,19 +48,19 @@
         <div class="col-md-4"></div>
         <div class="col-md-4">
 
-            <a class="btn btn-block btn-social btn-facebook" (click)="login( 'facebook' )">
+            <a class="btn btn-block btn-social btn-lg btn-facebook" (click)="login( 'facebook' )">
                 <span class="fa fa-facebook"></span> Sign in with Facebook
             </a>
 
-            <a class="btn btn-block btn-social btn-google" (click)="login( 'google' )">
+            <a class="btn btn-block btn-social btn-lg btn-google" (click)="login( 'google' )">
                     <span class="fa fa-google"></span> Sign in with Google
             </a>            
 
-            <a class="btn btn-block btn-social btn-twitter" (click)="login( 'twitter' )">
+            <a class="btn btn-block btn-social btn-lg btn-twitter" (click)="login( 'twitter' )">
                     <span class="fa fa-twitter"></span> Sign in with Twitter
             </a>            
 
-            <a class="btn btn-block btn-social btn-github" (click)="login( 'github' )">
+            <a class="btn btn-block btn-social btn-lg btn-github" (click)="login( 'github' )">
                     <span class="fa fa-github"></span> Sign in with GitHub
             </a>
 

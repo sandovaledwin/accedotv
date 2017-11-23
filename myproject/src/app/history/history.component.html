@@ -1,0 +1,31 @@
+<div class="container historySection" *ngIf="!showLogout">
+
+  <div class="row">
+
+      <div class="col-md-2"></div>
+      <div class="col-md-8">
+        <p>This is your current history list: </p>
+      </div>
+      <div class="col-md-2"></div>
+  </div>
+
+  <div class="row">
+
+      <div class="col-md-2"></div>
+      <div class="col-md-8">
+          <p>&nbsp;</p>
+          <!--<img src="{{ getImage( record.movieId ) }}" width="450" height="160" />-->
+          
+          <table>
+            <tr *ngFor="let record of historyRecords">
+              <td class="title"><a href="#" (click)="openMovie( record.movieId )">{{ getMovieInfo( record.movieId ).title }}</a></td>
+              <td class="date">{{ formatDate( record.date ) }}</td>
+            </tr>
+          </table>
+          
+      </div>
+      <div class="col-md-2"></div>
+
+  </div>
+
+</div>
