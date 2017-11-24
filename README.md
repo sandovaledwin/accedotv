@@ -10,6 +10,9 @@ Video on Demand Application developed with the Single Page Application and Serve
 
 ## Prerequisites
 
+### Install Git Client
+* [Mac / Win](https://git-scm.com/downloads).
+
 ### Install Docker
 * [Mac OS X](https://store.docker.com/editions/community/docker-ce-desktop-mac).
 * [Windows](https://store.docker.com/editions/community/docker-ce-desktop-windows).
